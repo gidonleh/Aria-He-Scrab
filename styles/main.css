@@ -1,0 +1,32 @@
+.divTable {
+    display: table;
+    border: 1px solid #000;
+    width: 100%;
+    text-align: center;
+    height: 75vh;
+    margin: auto;
+}
+
+
+.divTableBody {
+
+    display: table-row-group;
+}
+
+.divTableRow {
+
+    display: table-row;
+}
+.divTableCell{
+    border: 1px solid black;
+display: table-cell;
+    /* margin: 0px 10px 0px 10px; */
+}
+
+#p1name, #p1table, #p2name, #p2table {
+    border: 1px solid black;
+}
+
+/* .container {
+    width: 95% !important;
+} */
