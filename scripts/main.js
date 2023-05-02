@@ -6905,54 +6905,78 @@ const checkWord = () => {
 
 // })
 
-const fill = document.querySelectorAll('.draggable');
-const empties = document.querySelectorAll('.divTableCell');
+// const fill = document.querySelectorAll('.draggable');
+// const empties = document.querySelectorAll('.divTableCell');
 
 //Fill Listeners
-fill.forEach(e => {
-e.addEventListener('dragstart', dragStart);
-})
-fill.forEach(e => {
-    e.addEventListener('dragend', dragEnd);
-    })
+// fill.forEach(e => {
+// e.addEventListener('dragstart', dragStart);
+// })
+// fill.forEach(e => {
+//     e.addEventListener('dragend', dragEnd);
+//     })
 
 // Loop through empties and call drag events
-for (const empty of empties) {
-    empty.addEventListener('dragover', dragOver);
-    empty.addEventListener('dragenter', dragEnter);
-    empty.addEventListener('dragleave', dragLeave);
-    empty.addEventListener('drop', dragDrop);
-}
+// for (const empty of empties) {
+//     empty.addEventListener('dragover', dragOver);
+//     empty.addEventListener('dragenter', dragEnter);
+//     empty.addEventListener('dragleave', dragLeave);
+//     empty.addEventListener('drop', dragDrop);
+// }
 // Drag Functions
-let a = '';
-function dragStart(e) {
-    a = e.target;
-    this.className+= ' hold';
-    setTimeout( ()=>{
-        this.className+=' invisible'
-    }, 0);
-}
+// let a = '';
+// function dragStart(e) {
+//     a = e.target;
+//     this.className+= ' hold';
+//     setTimeout( ()=>{
+//         this.className+=' invisible'
+//     }, 0);
+// }
 
-function dragEnd() {
-    this.classList = 'col s6 btn';
+// function dragEnd() {
+//     this.classList = 'col s6 btn';
     
-    this.style.border = '1px solid black'
-    this.style.padding = '0 .75rem'
-}
+//     this.style.border = '1px solid black'
+//     this.style.padding = '0 .75rem'
+// }
 
-function dragOver(e) {
-    e.preventDefault();
-    console.log('over');
-}
-function dragEnter() {
-    console.log('enter');
-    this.className += ' hovered';
-}
-function dragLeave() {
-    this.className += 'divTableCell';
-}
-function dragDrop() {
-    this.className += 'divTableCell';
-    this.append(a);
-}
+// function dragOver(e) {
+//     e.preventDefault();
+//     console.log('over');
+// }
+// function dragEnter() {
+//     console.log('enter');
+//     this.className += ' hovered';
+// }
+// function dragLeave() {
+//     this.className += 'divTableCell';
+// }
+// function dragDrop() {
+//     this.className += 'divTableCell';
+//     this.append(a);
+// }
 
+let b = 5;
+let c = 6;
+console.log(b);
+console.log(c);
+document.querySelectorAll('.draggable').forEach(e=> {
+    document.getElementById(e.id).addEventListener("click", ()=>{
+        console.log('clicked ' + e.id);
+        b=e.id;
+        console.log(b);
+    }
+    )
+})
+
+document.querySelectorAll('.tg-0pky').forEach(e=> {
+    document.getElementById(e.id).addEventListener("click", ()=>{
+        console.log('clicked ' + e.id);
+        c=e.id;
+        console.log(document.getElementById(c).innerHTML);
+        console.log(document.getElementById(b).innerHTML);
+        document.getElementById(c).innerHTML = document.getElementById(b).innerHTML;
+        document.getElementById(c).style.backgroundColor = 'lightgrey';
+    }
+    )
+})
