@@ -19,7 +19,8 @@
 }
 .divTableCell{
     border: 1px solid black;
-display: table-cell;
+    display: table-cell;
+    background-color: grey;
     /* margin: 0px 10px 0px 10px; */
 }
 
@@ -30,3 +31,28 @@ display: table-cell;
 /* .container {
     width: 95% !important;
 } */
+
+/* adding dragging properties to the users characters */
+
+.draggable {
+    padding: 1rem;
+    cursor: grab !important;
+}
+
+/* when we hover on empty cell it should do something */
+.hold { 
+ border: solid #ccc 4px;
+}
+.hovered {
+    background: #f4f4f4;
+    border-style: dashed;
+}
+.invisible {
+    visibility: hidden;
+}
+
+
+.row {
+margin-bottom: 0px !important;
+}
+
